@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
      <nav style={{margin:"2% 3%",padding:"2", gap:"30px", textAlign:"center",justifyContent:"center"}} class="navbar navbar-expand-lg navbar-light bg-light">
-  <img src={logo} style={{maxWidth:"9.2%",minWidth:"9.2%", height:"auto" }} />
+  <img src={logo} style={{maxWidth:"9.2%", height:"auto" }} />
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav" style={{ gap:"10px" , fontFamily: "Lato, sans-serif", fontSize:"1.3rem" }} >
       <li class="nav-item active">
