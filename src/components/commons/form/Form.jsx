@@ -3,19 +3,21 @@ import { makeStyles } from "@material-ui/core/styles";
 import emailjs from "@emailjs/browser";
 import { Typography } from "@material-ui/core";
 import bgImage from "../../../images/backgroun.png";
+import { border } from "@mui/system";
+import "./form.css"
 
 const useStyles = makeStyles((theme) => ({
   form: {
     margin: "auto",
-    marginTop: "20px",
+    marginTop: "5px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     backgroundImage:"url{bgImage}",
     width: "30%",
     "& > *": {
-      margin: theme.spacing(2),
-      width: "25ch",
+      margin: "5px",
+      width: "20ch",
       fontFamily: "Roboto, sans-serif",
       fontSize: "16px",
     },
@@ -35,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     backgroundColor: "#4CAF50",
     color: "white",
-    fontWeight: "bold",
     "&:hover": {
       backgroundColor: "#3e8e41",
     },
@@ -69,6 +70,8 @@ export default function Form() {
 
   return (
     <>
+    <div class="line" style={{width:"100vw", height:"10px", backgroundColor:"rgb(116, 199, 236)", marginBottom:"50px" }}></div>
+    <div class="contornoForm" >
       <form id="contacto"
         ref={formRef}
         className={classes.form}
@@ -76,8 +79,7 @@ export default function Form() {
         autoComplete="off"
         onSubmit={onSubmit}
       >
-        <Typography  variant="h2" style={{fontWeight: "bold",
-    textAlign: "center", fontSize:"180%" }} >
+        <Typography class="typography" >
           Contácto
         </Typography>
         <label htmlFor="from_name" >Nombre</label>
@@ -90,6 +92,7 @@ export default function Form() {
           Enviar
         </button>
       </form>
+      </div>
     </>
   );
 }

@@ -17,21 +17,18 @@ const Header = () => {
     setAnchorEl(null);
   };
 
-
-
   return (
     <>
       <nav
         style={{
-          margin: "2% 3%",
-          padding: "2",
+          justifyContent:"center",
+          minWidth:"100%",
+          padding: "15px 30px",
           gap: "30px",
-          textAlign: "center",
-          justifyContent: "center",
         }}
         class="navbar navbar-expand-lg navbar-light bg-light"
       >
-        <img src={logo} />
+        <img class="imgHeader" src={logo} />
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul
             class="navbar-nav"
@@ -54,33 +51,40 @@ const Header = () => {
           </ul>
         </div>
         <div class="menuHamburger">
-        <Button
-          id="demo-positioned-button"
-          aria-controls={open ? "demo-positioned-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        >
-        <MenuIcon />
-        </Button>
-        <Menu
-          id="demo-positioned-menu"
-          aria-labelledby="demo-positioned-button"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-        >
-         <MenuItem onClick={handleClose}>Home</MenuItem>
-          <MenuItem onClick={handleClose}><a href="#contacto"  style={{textDecoration:"none",color:"black" } }>Contacto</a>  </MenuItem>
-        </Menu>
+          <Button
+            id="demo-positioned-button"
+            aria-controls={open ? "demo-positioned-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+          >
+            <MenuIcon />
+          </Button>
+          <Menu
+            id="demo-positioned-menu"
+            aria-labelledby="demo-positioned-button"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+          >
+            <MenuItem onClick={handleClose}>Home</MenuItem>
+            <MenuItem onClick={handleClose}>
+              <a
+                href="#contacto"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Contacto
+              </a>{" "}
+            </MenuItem>
+          </Menu>
         </div>
       </nav>
     </>

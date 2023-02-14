@@ -1,0 +1,22 @@
+.contornoForm{
+    width:30vw;
+    height:600px;
+    margin:auto;
+    border:2px solid rgb(116, 199, 236);
+    margin-bottom:40px
+}
+.typography  {
+  font-size: 2.2rem !important ;
+  text-align: center !important;
+  margin: auto !important;
+  font-family: "-apple-system" !important;
+  width: 100% !important;
+  margin: 35px !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .contornoForm {
+    width: 80vw;
+  }
+ 
+}
