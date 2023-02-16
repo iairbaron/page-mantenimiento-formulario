@@ -81,7 +81,7 @@ export default function Form() {
         onSubmit={onSubmit}
       >
         <Typography class="typography" >
-          Contácto
+          Contacto
         </Typography>
         <label htmlFor="from_name" >Nombre</label>
         <input type="text" name="from_name" id="from_name" />
