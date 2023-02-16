@@ -58,6 +58,7 @@ export default function Form() {
       .then(
         (result) => {
           console.log(result);
+          return alert("Mensaje enviado!")
         },
         (error) => {
           // show the user an error
